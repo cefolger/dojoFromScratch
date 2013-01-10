@@ -21,8 +21,8 @@ var profile = (function(){
  
         layers: {
             "dojo/dojo": {
-                include: [ "dojo/dojo", "dojo/i18n", "dojo/domReady",
-                    "app/main", "app/run" ],
+                include: [ "dojo/dojo", "dojo/i18n", "dojo/domReady"
+                    /*,"app/main", "app/run"*/ ],
                 customBase: true,
                 boot: true
             }
