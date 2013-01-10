@@ -103,3 +103,8 @@ else
 fi
 
 $cmd $cmdflags load=build $ba
+
+echo 'copy index.html to dist...'
+cp src/index.html dist/releasename
+
+echo 'done'
