@@ -4,6 +4,38 @@
     <meta charset="utf-8">
     <title>ICN</title>
 
+    <script type="text/javascript" src="dojo/dojo.js" ></script>
+    <!--
+    <script src="icn/SampleModule.js"></script>
+    -->
+
+    <script>
+        require([
+            "icn/SampleModule"
+        ], function( SampleModule ) {
+            var sampleModule = new SampleModule();
+
+            sampleModule.start();
+        });
+        /*
+        require([
+            "dojo/parser",
+            "dojo/ready",
+            "sna/util/I18nUtil",
+            "dijit/layout/BorderContainer",
+            "dijit/layout/ContentPane",
+            "dijit/MenuBarItem",
+            "dijit/DropDownMenu",
+            "dijit/form/DropDownButton"
+        ], function( parser, ready, i18nUtil ) {
+            ready(function() {
+                parser.parse();
+            });
+            i18nUtil.parseDOM();
+        });
+        */
+    </script>
+
     <style>
         body {
              background-color: gold;

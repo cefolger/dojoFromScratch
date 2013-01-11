@@ -1,0 +1,4 @@
+To build:
+
+./src/util/buildscripts/build.sh --profile dojofromscratch.profile.js
+
