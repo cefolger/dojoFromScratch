@@ -13,16 +13,24 @@
 
     <script>
         require([
-            "icn/SampleModule",
-            "dojo/parser",
-            "dojo/ready",
-            "dijit/form/Button",
-        ], function( SampleModule, parser, ready, Button ) {
+            'icn/SampleModule',
+            'dojo/parser',
+            'dojo/ready',
+            'dijit/form/Button',
+            'dojo/dom-construct'
+        ], function( SampleModule, parser, ready, Button, domConstruct ) {
             ready(function() {
                 parser.parse();
 
-                var sampleModule = new SampleModule();
-                sampleModule.start();
+                var button = new Button({
+                    label: 'Invoke SampleModule',
+                    onClick: function() {
+                        var sampleModule = new SampleModule();
+                        sampleModule.start();
+                    }
+                });
+
+                domConstruct.place(button.domNode, 'button3container');
             });
         });
     </script>
