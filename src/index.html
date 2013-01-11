@@ -11,29 +11,18 @@
 
     <script>
         require([
-            "icn/SampleModule"
-        ], function( SampleModule ) {
-            var sampleModule = new SampleModule();
-
-            sampleModule.start();
-        });
-        /*
-        require([
+            "icn/SampleModule",
             "dojo/parser",
             "dojo/ready",
-            "sna/util/I18nUtil",
-            "dijit/layout/BorderContainer",
-            "dijit/layout/ContentPane",
-            "dijit/MenuBarItem",
-            "dijit/DropDownMenu",
-            "dijit/form/DropDownButton"
-        ], function( parser, ready, i18nUtil ) {
+            "dijit/form/Button",
+        ], function( SampleModule, parser, ready, Button ) {
             ready(function() {
                 parser.parse();
+
+                var sampleModule = new SampleModule();
+                sampleModule.start();
             });
-            i18nUtil.parseDOM();
         });
-        */
     </script>
 
     <style>
@@ -49,6 +38,25 @@
         <header>
             <h1>ICN</h1>
         </header>
+
+        <section>
+            <div data-dojo-type="dijit/form/Button"
+                 data-dojo-props="label: 'Button 1', width: '100px'"></div>
+        </section>
+
+        <section>
+            <button data-dojo-type="dijit/form/Button" type="button">Button 2
+                <script type="dojo/on" data-dojo-event="click" data-dojo-args="evt">
+                    require(["dojo/dom"], function(dom){
+                        alert('here');
+                    });
+                </script>
+            </button>
+        </section>
+
+        <section id="button3container">
+
+        </section>
 
         <section>
             <h2>Section 1</h2>
