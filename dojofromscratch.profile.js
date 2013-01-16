@@ -16,7 +16,7 @@ var profile = (function(){
             location: "dojox"
         },{
             name: "icn",
-            location: "icn"
+            location: "http://jb.na.sas.com/icn"
         }],
  
         layers: {
