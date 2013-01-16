@@ -1,0 +1,16 @@
+#!/bin/bash
+
+deploy=/var/www/dojoFromScratch
+mode=$1 #src/dist
+fileSuffix=$mode
+
+if [[ "$mode" == "dist" ]]; then
+    fileSuffix="$mode/releasename"
+fi
+
+rm -Rf $deploy
+mkdir $deploy
+cp -R /home/jonbri/repos/git/dojoFromScratch/${fileSuffix}/* $deploy
+
+echo "done"
+
