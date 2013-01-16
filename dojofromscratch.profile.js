@@ -21,7 +21,7 @@ var profile = (function(){
  
         layers: {
             "dojo/dojo": {
-                include: [ "dojo/dojo", "dojo/i18n", "dojo/domReady", "icn/SampleModule", "dojo/parser"],
+                include: [ "dojo/dojo", "dojo/i18n", "dojo/domReady", "icn/SampleModule", "dojo/parser", "dijit/dijit"],
                 customBase: true,
                 boot: true
             }

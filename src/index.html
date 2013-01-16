@@ -7,31 +7,13 @@
     <link rel="stylesheet" type="text/css" href="dijit/themes/claro/claro.css">
 
     <script type="text/javascript" src="dojo/dojo.js" ></script>
-    <!--
-    <script src="icn/SampleModule.js"></script>
-    -->
 
     <script>
         require([
-            'icn/SampleModule',
-            'dojo/parser',
-            'dojo/ready',
-            'dijit/form/Button',
-            'dojo/dom-construct'
-        ], function( SampleModule, parser, ready, Button, domConstruct ) {
-            ready(function() {
-                parser.parse();
-
-                var button = new Button({
-                    label: 'Invoke SampleModule',
-                    onClick: function() {
-                        var sampleModule = new SampleModule();
-                        sampleModule.start();
-                    }
-                });
-
-                domConstruct.place(button.domNode, 'button3container');
-            });
+            'icn/SampleModule'
+        ], function( SampleModule ) {
+	    var sampleModule = new SampleModule();
+            sampleModule.start();
         });
     </script>
 
@@ -42,53 +24,6 @@
     </style>
 </head>
 <body class="claro">
-    <div id="splash"></div>
-
-    <article>
-        <header>
-            <h1>ICN</h1>
-        </header>
-
-        <section>
-            <div data-dojo-type="dijit/form/Button"
-                 data-dojo-props="label: 'Button 1', width: '100px'"></div>
-        </section>
-
-        <section>
-            <button data-dojo-type="dijit/form/Button" type="button">Button 2
-                <script type="dojo/on" data-dojo-event="click" data-dojo-args="evt">
-                    require(["dojo/dom"], function(dom){
-                        alert('here');
-                    });
-                </script>
-            </button>
-        </section>
-
-        <section id="button3container">
-
-        </section>
-
-        <section>
-            <h2>Section 1 here</h2>
-            
-            <p>
-                Some Content Some Content Some Content Some Content
-            <p>
-            <p>
-                Some Content Some Content Some Content Some Content
-            <p>
-        </section>
-
-        <section>
-            <h2>Section 2</h2>
-
-            <p>
-                Some Content Some Content Some Content Some Content
-            <p>
-            <p>
-                Some Content Some Content Some Content Some Content
-            <p>
-        </section>
-    </article>
+hello
 </body>
 </html>
