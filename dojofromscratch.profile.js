@@ -16,13 +16,12 @@ var profile = (function(){
             location: "dojox"
         },{
             name: "icn",
-            location: "http://jb.na.sas.com/icn"
+            location: "icn"
         }],
  
         layers: {
             "dojo/dojo": {
-                include: [ "dojo/dojo", "dojo/i18n", "dojo/domReady", "icn/SampleModule"
-                    /*,"app/main", "app/run"*/ ],
+                include: [ "dojo/dojo", "dojo/i18n", "dojo/domReady", "icn/SampleModule", "dojo/parser"],
                 customBase: true,
                 boot: true
             }
